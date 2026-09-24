@@ -16,10 +16,12 @@ jobs:
 
       - name: Teste Simples
         run: echo "Pipeline funcionando"
+
       - name: Login no Docker Hub
         uses: docker/login-action@v4
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -name: Criar imagem no docker
-      run: docker build -t caiodevone/siteDevOne:latest
+
+      - name: Criar imagem no Docker
+        run: docker build -t caiodevone/sitedevone:latest .
