@@ -25,3 +25,5 @@ jobs:
 
       - name: Criar imagem no Docker
         run: docker build -t caiodevone/sitedevone:latest .
+      - name: Enviar imagem para Docker Hub
+        run: docker push caiodevone/sitedevone:latest
